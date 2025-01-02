@@ -1,21 +1,9 @@
+from cadastro.save_in_json import salvar_no_json
 import json
 import uuid
 
 
 alunos = []
-
-#json esta me dando dor de cabeça...
-def salvar_cadastro (nome_doc, dados):
-    try:
-        with open(nome_doc, "r") as arquivo:
-            alunos_exist = json.load(arquivo)
-    except (FileNotFoundError, json.JSONDecodeError):
-        alunos_exist = []
-
-    alunos_exist.append(dados)
-
-    with open(nome_doc, "w") as arquivo:
-        json.dump(alunos_exist, arquivo, indent=4)
         
 
 def cadastrar_aluno():
@@ -36,25 +24,21 @@ def cadastrar_aluno():
     
     aluno = {
         
-        matricula:{
-            "nome" : nome,
-            "matricula" : matricula,
-            "data_nascimento" : data_nascimento,
-            "sexo" : sexo,
-            "endereço" : endereço,
-            "telefone" : telefone,
-            "email" : email 
-        }
-
+        "nome" : nome,
+        "matricula" : matricula,
+        "data_nascimento" : data_nascimento,
+        "sexo" : sexo,
+        "endereço" : endereço,
+        "telefone" : telefone,
+        "email" : email 
     }
     
+    salvar_no_json("dados_escolares.json", "alunos", aluno)
     
-    salvar_cadastro("logins.json", aluno)
-    print(f"Cadastro Realizado...salve seu codigo de matricula para fazer login")
     
 def lista_aluno():
     try:
-        with open("logins.json", "r") as arquivo:
+        with open("dados_escolares.json", "r") as arquivo:
             alunos_exist = json.load(arquivo)
     except (FileNotFoundError, json.JSONDecodeError):
         alunos_exist = []         
