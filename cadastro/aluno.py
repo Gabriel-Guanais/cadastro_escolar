@@ -6,8 +6,17 @@ alunos = []
 
 #json esta me dando dor de cabeça...
 def salvar_cadastro (nome_doc, dados):
-    with open(nome_doc, "r") as arquivo:
-        json.dump(dados,  arquivo, indent=4)
+    try:
+        with open(nome_doc, "r") as arquivo:
+            alunos_exist = json.load(arquivo)
+    except (FileNotFoundError, json.JSONDecodeError):
+        alunos_exist = []
+
+    alunos_exist.append(dados)
+
+    with open(nome_doc, "w") as arquivo:
+        json.dump(alunos_exist, arquivo, indent=4)
+        
 
 def cadastrar_aluno():
     

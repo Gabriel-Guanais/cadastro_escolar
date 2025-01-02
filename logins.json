@@ -1,11 +1,24 @@
-{
-    "Ac8519": {
-        "nome": "gustavos",
-        "matricula": "Ac8519",
-        "data_nascimento": "34344",
-        "sexo": "m",
-        "endere\u00e7o": "rua getulio vargas 552",
-        "telefone": "3424242",
-        "email": "laiteguanais@gmail.com"
+[
+    {
+        "A02e18": {
+            "nome": "dfsfsfs",
+            "matricula": "A02e18",
+            "data_nascimento": "0808080",
+            "sexo": "masculino",
+            "endere\u00e7o": "rua tatan 444",
+            "telefone": "24324242",
+            "email": "fsffs@gmail.com"
+        }
+    },
+    {
+        "A8c3d1": {
+            "nome": "gabriel",
+            "matricula": "A8c3d1",
+            "data_nascimento": "2423424",
+            "sexo": "masculino",
+            "endere\u00e7o": "rua getulio 44",
+            "telefone": "42424",
+            "email": "gcorreag@gmail.com"
+        }
     }
-}
+]
