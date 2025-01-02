@@ -52,5 +52,16 @@ def cadastrar_aluno():
     salvar_cadastro("logins.json", aluno)
     print(f"Cadastro Realizado...salve seu codigo de matricula para fazer login")
     
+def lista_aluno():
+    try:
+        with open("logins.json", "r") as arquivo:
+            alunos_exist = json.load(arquivo)
+    except (FileNotFoundError, json.JSONDecodeError):
+        alunos_exist = []         
+    
+    nomes_lista = [list(aluno.values())[0]['nome'] for aluno in alunos_exist]
+    print(f"nome dos alunos cadastrados: {nomes_lista}")
+    
+
 
     
