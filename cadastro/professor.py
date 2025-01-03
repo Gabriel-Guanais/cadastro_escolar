@@ -1,12 +1,12 @@
 import uuid
 from save_in_json import salvar_no_json
 
-professores = []
+
 
 def cadastrar_professor():
-    print(30*"=")
+    print(40*"=")
     print("BEM-VINDO A TELA DE CADASTRO DO PROFESSOR")
-    print(30*"=")
+    print(40*"=")
     print("Preencha os espaços abaixo: \n")
     
     nome = input("Digite seu nome completo: ")
