@@ -1,4 +1,4 @@
-from cadastro.save_in_json import salvar_no_json
+from save_in_json import salvar_no_json
 import json
 import uuid
 
@@ -9,7 +9,7 @@ alunos = []
 def cadastrar_aluno():
     
     print(30*"=")
-    print("BEM-VINDO A TELA DE CADASTRO")
+    print("BEM-VINDO A TELA DE CADASTRO DO ALUNO")
     print(30*"=")
     print("Preencha os espaços abaixo: \n")
 
@@ -35,16 +35,7 @@ def cadastrar_aluno():
     
     salvar_no_json("dados_escolares.json", "alunos", aluno)
     
-    
-def lista_aluno():
-    try:
-        with open("dados_escolares.json", "r") as arquivo:
-            alunos_exist = json.load(arquivo)
-    except (FileNotFoundError, json.JSONDecodeError):
-        alunos_exist = []         
-    
-    nomes_lista = [list(aluno.values())[0]['nome'] for aluno in alunos_exist]
-    print(f"nome dos alunos cadastrados: {nomes_lista}")
+
     
 
 

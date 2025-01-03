@@ -19,7 +19,18 @@
             "email": "pamre@gmail.com"
         }
     ],
-    "professores": [],
+    "professores": [
+        {
+            "nome": "adilson correa",
+            "codigo": "Ab1faf",
+            "data_nascimento": 803422,
+            "sexo": "masculino",
+            "endere\u00e7o": "guilermine 2323",
+            "telefone": "42424242",
+            "email": "gustava@gmail.com",
+            "diciplina": "matematica"
+        }
+    ],
     "turmas": [],
     "disciplinas": []
 }

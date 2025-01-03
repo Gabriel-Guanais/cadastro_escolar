@@ -9,7 +9,7 @@ def salvar_no_json(nome_arquivo, categoria, dado):
     
     if categoria not in dados_gerais:
         dados_gerais[categoria] = []
-    
+        
     dados_gerais[categoria].append(dado)
     
     with open(nome_arquivo, "w") as arquivo:
