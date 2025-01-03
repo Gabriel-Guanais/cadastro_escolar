@@ -2,6 +2,7 @@ from controle import resposta_usr
 from aluno import cadastrar_aluno
 from professor import cadastrar_professor 
 from diciplina import cadastrar_diciplina
+from turma import cadastrar_turma
 import os
 
 def limpar_tela():
@@ -21,14 +22,29 @@ elif resposta_usr == 3:
     
 elif resposta_usr == 4:
     limpar_tela()
-    ...
+    cadastrar_turma()
     
 elif resposta_usr == 5:
     limpar_tela()
     ...
     
 elif resposta_usr == 6:
-    limpar_tela
+    limpar_tela()
+    ...
+elif resposta_usr == 6:
+    limpar_tela()
+    ...
+elif resposta_usr == 6:
+    limpar_tela()
+    ...
+elif resposta_usr == 6:
+    limpar_tela()
+    ...
+elif resposta_usr == 6:
+    limpar_tela()
+    ...
+elif resposta_usr == 6:
+    limpar_tela()
     ...
     
     

@@ -31,6 +31,24 @@
             "diciplina": "matematica"
         }
     ],
-    "turmas": [],
+    "turmas": [
+        {
+            "nome": "turma1",
+            "professor": "234234",
+            "codigo": "A843c0",
+            "diciplinas": [
+                "43242",
+                "234242",
+                "24324",
+                "2424"
+            ],
+            "alunos": [
+                "422",
+                "43424",
+                "4324",
+                "3424"
+            ]
+        }
+    ],
     "disciplinas": []
 }
