@@ -1,6 +1,6 @@
 from controle import resposta_usr
 from aluno import cadastrar_aluno, matricular_aluno_turma
-from professor import cadastrar_professor 
+from professor import cadastrar_professor, alocar_professor_disciplina 
 from diciplina import cadastrar_diciplina
 from turma import cadastrar_turma
 import os
@@ -31,7 +31,8 @@ elif resposta_usr == 5:
     
 elif resposta_usr == 6:
     limpar_tela()
-    ...
+    alocar_professor_disciplina()
+
 elif resposta_usr == 7:
     limpar_tela()
     ...

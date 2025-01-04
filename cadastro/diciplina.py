@@ -20,5 +20,5 @@ def cadastrar_diciplina():
         "professor" : professor
     }
     
-    salvar_no_json("dados_escolares.json", "diciplinas", diciplina)
+    salvar_no_json("dados_escolares.json", "disciplinas", diciplina)
     
