@@ -1,5 +1,5 @@
 from controle import resposta_usr
-from aluno import cadastrar_aluno
+from aluno import cadastrar_aluno, matricular_aluno_turma
 from professor import cadastrar_professor 
 from diciplina import cadastrar_diciplina
 from turma import cadastrar_turma
@@ -26,30 +26,32 @@ elif resposta_usr == 4:
     
 elif resposta_usr == 5:
     limpar_tela()
-    ...
-    
-elif resposta_usr == 6:
-    limpar_tela()
-    ...
-elif resposta_usr == 6:
-    limpar_tela()
-    ...
-elif resposta_usr == 6:
-    limpar_tela()
-    ...
-elif resposta_usr == 6:
-    limpar_tela()
-    ...
-elif resposta_usr == 6:
-    limpar_tela()
-    ...
-elif resposta_usr == 6:
-    limpar_tela()
-    ...
+    matricular_aluno_turma()
     
     
+elif resposta_usr == 6:
+    limpar_tela()
+    ...
+elif resposta_usr == 7:
+    limpar_tela()
+    ...
+elif resposta_usr == 8:
+    limpar_tela()
+    ...
+elif resposta_usr == 9:
+    limpar_tela()
+    ...
+elif resposta_usr == 10:
+    limpar_tela()
+    ...
+elif resposta_usr == 11:
+    limpar_tela()
+elif resposta_usr == 0:
+    limpar_tela()
+    print("---SAINDO---")
+    ...     
 else:
-    print("funcionou")
+    ...
 
 
 
