@@ -74,11 +74,6 @@ def matricular_aluno():
 def listar_alunos_matriculados_e_turma():
     
     print("=== alunos matriculados e turmas ===")
-    for m in dados_escola["alunos_matriculados"]:
-        aluno = next((a for a in dados_escola["alunos"] if a["matricula"] == m["matricula"]), None)
-        turma = next((t for t in dados_escola["turmas"] if t["codigo"] == m["codigo_turma"]), None)
 
-        if aluno and turma:
-            print(f"aluno: {aluno['nome']} - turma: {turma['nome']}")
-        else:
-            print(f"matricula {m['matricula']} não encontrada")
+    for aluno in dados_escola["alunos"]:
+        print(f"Matrícula: {aluno['matricula']}, Nome: {aluno['nome']}")
