@@ -1,5 +1,5 @@
 from controle import menu 
-from aluno import cadastrar_aluno, matricular_aluno_turma
+from aluno import cadastrar_aluno, matricular_aluno, listar_alunos_matriculados_e_turma
 from professor import cadastrar_professor
 from diciplina import cadastrar_diciplina
 from turma import cadastrar_turma
@@ -29,7 +29,7 @@ def main():
     
         elif resposta_usr == 5:
             limpar_tela()
-            matricular_aluno_turma()
+            matricular_aluno()
     
         elif resposta_usr == 6:
             limpar_tela()
@@ -43,7 +43,8 @@ def main():
             ...
         elif resposta_usr == 9:
             limpar_tela()
-            ...
+            listar_alunos_matriculados_e_turma()
+            
         elif resposta_usr == 10:
             limpar_tela()
             ...
