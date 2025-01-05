@@ -1,10 +1,6 @@
-from save_in_json import salvar_no_json
-import json
+import dados_da_escola
 import uuid
-
-
-alunos = []
-        
+  
 
 def cadastrar_aluno():
     
@@ -33,51 +29,16 @@ def cadastrar_aluno():
         "email" : email 
     }
     
-    salvar_no_json("dados_escolares.json", "alunos", aluno)
+    print(dados_da_escola.dados_escola)
+    dados_da_escola.dados_escola["alunos"].append(aluno)
+    print(f"\naluno {nome} cadastrado com sucesso!")
+    print(dados_da_escola.dados_escola)
     
 def matricular_aluno_turma():
-    from save_in_json import salvar_no_json
-    import json 
-    
+     
     print(20*"=")
     print("MATRICULAR ALUNO")
     print(20*"=")
     print("preencha os espaços abaixo: \n")
     
-    
-    try:
-        with open("dados_escolares.json", "r") as arquivo:
-            dados = json.load(arquivo) 
-    except FileNotFoundError:
-        print("nenhum dado encontrado")
-        return
-    
-    if "turmas" not in dados or not dados["turmas"]:
-        print("nenhuma turma cadastrada")
-        return
-    
-    print("Turmas encontradas:")
-    for turma in dados["turmas"]:
-        print(f"Código: {turma['codigo']} | Nome: {turma['nome']}")
-    
-    codigo_turma = input("digite o coidigo da turma:")
-    matricula_aluno = input("digite a matricula do aluno:")
-    
-    for turma in dados["turmas"]:
-        if turma["codigo"] == codigo_turma:
-            if matricula_aluno not in turma["alunos"]:
-                turma["alunos"].append(matricula_aluno)
-                salvar_no_json("dados_escolares.json", "turmas", turma)
-                print("Aluno matriculado com sucesso!")
-                return
-            else:
-                print("Aluno já está matriculado nesta turma.")
-                return
-    
-    print("Turma não encontrada.")
-
-    
-    
-
-
-    
+   

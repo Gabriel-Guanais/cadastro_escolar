@@ -1,4 +1,4 @@
-from save_in_json import salvar_no_json
+
 import uuid
 
 def cadastrar_diciplina():
@@ -20,5 +20,4 @@ def cadastrar_diciplina():
         "professor" : professor
     }
     
-    salvar_no_json("dados_escolares.json", "disciplinas", diciplina)
     

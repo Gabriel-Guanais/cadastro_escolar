@@ -23,5 +23,5 @@ def menu():
         return escolha_usr
     except ValueError:
         print("Número Invalido") 
+        return None
         
-resposta_usr = menu()

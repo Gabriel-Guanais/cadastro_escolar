@@ -1,5 +1,5 @@
-from save_in_json import salvar_no_json
 import uuid
+import dados_da_escola
 
 def cadastrar_turma():
     print("=" * 40)
@@ -24,5 +24,5 @@ def cadastrar_turma():
         "alunos": alunos
     }
     
-    salvar_no_json("dados_escolares.json", "turmas", turma)
+    dados_da_escola.dados_escola["turmas"].append(turma)
     print(f"turma '{nome}' cadastrada com sucesso!")
