@@ -1,6 +1,6 @@
 from controle import menu 
 from aluno import cadastrar_aluno, matricular_aluno, listar_alunos_matriculados_e_turma
-from professor import cadastrar_professor
+from professor import cadastrar_professor, alocar_professor_na_diciplina, listar_professores_alocados
 from diciplina import cadastrar_diciplina
 from turma import cadastrar_turma
 import os
@@ -33,7 +33,7 @@ def main():
     
         elif resposta_usr == 6:
             limpar_tela()
-            ...
+            alocar_professor_na_diciplina()
 
         elif resposta_usr == 7:
             limpar_tela()
@@ -47,7 +47,7 @@ def main():
             
         elif resposta_usr == 10:
             limpar_tela()
-            ...
+            listar_professores_alocados
         elif resposta_usr == 11:
             limpar_tela()
         elif resposta_usr == 0:

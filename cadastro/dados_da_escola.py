@@ -3,5 +3,7 @@ dados_escola = {
     "professores": [],
     "disciplinas": [],
     "turmas": [],
-    "alocacoes": []
+    "alunos_matriculados": [],
+    "alocacoes_professor_diciplina": [],
+    "alocações_diciplina_turmas": []
 }

@@ -1,6 +1,5 @@
 # cadastro_escolar
 Olá a todos que estão acessando este arquivo!
-
 Meu nome é Gabriel, sou estudante do Colégio IFMS, e gostaria de compartilhar um pouco da experiência que tive ao desenvolver este programa. Foi o meu primeiro código de cadastro em Python, e, embora o resultado não tenha ficado exatamente como eu esperava, aprendi bastante ao longo do processo.
 
 Inicialmente, planejei usar JSON para armazenar os dados dos usuários. No entanto, devido à minha falta de familiaridade com o tema, tive muitas dificuldades, o que acabou gerando frustração. Em certo momento, comecei a depender bastante de ferramentas de inteligência artificial, o que, embora útil, me deixou desmotivado por sentir que não estava conseguindo resolver os problemas sozinho.

@@ -36,44 +36,35 @@ def cadastrar_aluno():
     
 def matricular_aluno():
     print("=== sistema de matriculas ===")
-    print("aqui tem as turmas q vc pode escolher:")
+    print("escolha uma das turmas abaixo:")
 
     for turma in dados_escola["turmas"]:
-        print(f"  - {turma['nome']} (cod: {turma['codigo']})")
+        print(f"{turma['nome']} (codigo: {turma['codigo']})")
 
-    matricula = input("\ndigita  a matricula do aluno: ")
+    matricula = input("\ndigite a matricula do aluno: ")
     codigo_turma = input("digite o codigo da turma: ")
 
-    aluno = None
-    for a in dados_escola["alunos"]:
-        if a["matricula"] == matricula:
-            aluno = a
-            break
-
+    aluno = next((a for a in dados_escola["alunos"] if a["matricula"] == matricula), None)
     if not aluno:
-        print("hmm... nao achei esse aluno, confere a matricula .")
+        print("aluno nao encontrado, verifique a matricula")
         return
 
-    turma = None
-    for t in dados_escola["turmas"]:
-        if t["codigo"] == codigo_turma:
-            turma = t
-            break
-
+    turma = next((t for t in dados_escola["turmas"] if t["codigo"] == codigo_turma), None)
     if not turma:
-        print("essa turma nao existe, tenta outro cod.")
+        print("turma nao encontrada verifique o codigo")
         return
 
-    if matricula in turma["alunos"]:
-        print(f"o aluno {aluno['nome']} já tá na turma {turma['nome']}")
+    if aluno["matricula"] in [a["matricula"] for a in turma["alunos"]]:
+        print(f"o aluno {aluno['nome']} ja esta matriculado na turma {turma['nome']}.")
     else:
-        turma["alunos"].append(matricula)
+        turma["alunos"].append(aluno)
         dados_escola["alunos_matriculados"].append({"matricula": matricula, "codigo_turma": codigo_turma})
-        print(f" o aluno {aluno['nome']} foi colocado na turma {turma['nome']}.")
+        aluno["turma"] = codigo_turma
+        print(f"aluno {aluno['nome']} matriculado na turma {turma['nome']}!")
 
 def listar_alunos_matriculados_e_turma():
     
     print("=== alunos matriculados e turmas ===")
 
     for aluno in dados_escola["alunos"]:
-        print(f"Matrícula: {aluno['matricula']}, Nome: {aluno['nome']}")
+        print(f"Matrícula: {aluno['matricula']}, Nome: {aluno['nome']}, Turma: {aluno['turma']},")
