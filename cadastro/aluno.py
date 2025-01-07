@@ -1,4 +1,5 @@
 from dados_da_escola import dados_escola
+import copy
 import uuid
   
 
@@ -57,7 +58,7 @@ def matricular_aluno():
     if aluno["matricula"] in [a["matricula"] for a in turma["alunos"]]:
         print(f"o aluno {aluno['nome']} ja esta matriculado na turma {turma['nome']}.")
     else:
-        turma["alunos"].append(aluno)
+        turma["alunos"].append(copy.deepcopy(aluno))
         dados_escola["alunos_matriculados"].append({"matricula": matricula, "codigo_turma": codigo_turma})
         aluno["turma"] = codigo_turma
         print(f"aluno {aluno['nome']} matriculado na turma {turma['nome']}!")

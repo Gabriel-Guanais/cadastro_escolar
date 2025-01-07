@@ -1,7 +1,7 @@
 from controle import menu 
 from aluno import cadastrar_aluno, matricular_aluno, listar_alunos_matriculados_e_turma
 from professor import cadastrar_professor, alocar_professor_na_diciplina, listar_professores_alocados
-from diciplina import cadastrar_diciplina, alocacao_diciplinas_turmas
+from diciplina import cadastrar_diciplina, alocacao_diciplinas_turmas, listar_diciplinas_alocadas
 from turma import cadastrar_turma
 import os
 
@@ -52,40 +52,16 @@ def main():
             
         elif resposta_usr == 11:
             limpar_tela()
+            listar_diciplinas_alocadas()
+            
         elif resposta_usr == 0:
            limpar_tela()
            print("---SAINDO---")  
            break 
         else:
-            ...
+            print("Opção Inválida")
  
 if __name__ == "__main__":
     main()
          
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-
-
+        
