@@ -1,7 +1,7 @@
 from controle import menu 
 from aluno import cadastrar_aluno, matricular_aluno, listar_alunos_matriculados_e_turma
 from professor import cadastrar_professor, alocar_professor_na_diciplina, listar_professores_alocados
-from diciplina import cadastrar_diciplina
+from diciplina import cadastrar_diciplina, alocacao_diciplinas_turmas
 from turma import cadastrar_turma
 import os
 
@@ -37,7 +37,8 @@ def main():
 
         elif resposta_usr == 7:
             limpar_tela()
-            ...
+            alocacao_diciplinas_turmas()
+            
         elif resposta_usr == 8:
             limpar_tela()
             ...
@@ -53,8 +54,8 @@ def main():
             limpar_tela()
         elif resposta_usr == 0:
            limpar_tela()
-           print("---SAINDO---")
-           ...     
+           print("---SAINDO---")  
+           break 
         else:
             ...
  

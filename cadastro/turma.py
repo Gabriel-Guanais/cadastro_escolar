@@ -11,7 +11,7 @@ def cadastrar_turma():
     codigo = f"T{str(uuid.uuid4())[:5]}"  
     professor = input("digite o código do professor responsável: ").strip()
     
-    diciplinas = input("digite os códigos das disciplinas (separados por vírgulas): ").split(",")
+    disciplinas = input("digite os códigos das disciplinas (separados por vírgulas): ").split(",")
   
     
     alunos = input("digite as matrículas dos alunos: ").split(",") 
@@ -20,7 +20,7 @@ def cadastrar_turma():
         "nome": nome,
         "codigo": codigo,
         "professor": professor,
-        "disciplinas": diciplinas,
+        "disciplinas": disciplinas,
         "alunos": alunos
     }
     
