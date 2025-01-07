@@ -1,4 +1,4 @@
-
+import dados_da_escola
 import uuid
 
 def cadastrar_diciplina():
@@ -13,11 +13,15 @@ def cadastrar_diciplina():
     carga_horaria = input("Digite a carga horaria: ")
     professor = input("Digite o codigo do professor: ")
     
-    diciplina = {
+    disciplina = {
         "nome" : nome,
         "codigo" : codigo,
         "carga_horaria" : carga_horaria,
         "professor" : professor
     }
     
+    dados_da_escola.dados_escola["disciplinas"].append(disciplina)
+    print(f"diciplina '{nome}' criada com sucesso!")
     
+def alocacao_diciplinas_turmas():
+    ...

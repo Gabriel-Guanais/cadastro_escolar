@@ -47,7 +47,8 @@ def main():
             
         elif resposta_usr == 10:
             limpar_tela()
-            listar_professores_alocados
+            listar_professores_alocados()
+            
         elif resposta_usr == 11:
             limpar_tela()
         elif resposta_usr == 0:
